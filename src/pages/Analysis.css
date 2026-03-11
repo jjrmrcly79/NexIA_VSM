@@ -1,0 +1,59 @@
+.analysis-tabs-content { animation: fadeIn 300ms ease-out; }
+
+.adkar-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr 60px;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.adkar-dimension {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: capitalize;
+}
+
+.adkar-score {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.resistance-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.resistance-type {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: var(--space-sm) 0;
+}
+
+.sim-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 80px 1fr 80px;
+  gap: var(--space-sm);
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.05);
+}
+
+.sim-label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.sim-delta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.sim-delta.positive { color: var(--color-green); }
+.sim-delta.negative { color: var(--color-red); }

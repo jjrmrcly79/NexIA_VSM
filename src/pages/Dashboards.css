@@ -1,0 +1,40 @@
+.dashboards-tabs-content { animation: fadeIn 300ms ease-out; }
+
+.metric-input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.05);
+}
+
+.metric-input-label {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.metric-input-value {
+  width: 120px;
+}
+
+.sustainability-score {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.sustainability-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 800;
+}

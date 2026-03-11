@@ -1,0 +1,48 @@
+.execution-tabs-content { animation: fadeIn 300ms ease-out; }
+
+.roadmap-phase {
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.roadmap-phase::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px rgba(20, 184, 166, 0.4);
+}
+
+.kaizen-priority-high { border-left: 3px solid var(--color-red); }
+.kaizen-priority-medium { border-left: 3px solid var(--color-amber); }
+.kaizen-priority-low { border-left: 3px solid var(--color-green); }
+
+.skills-table-container {
+  overflow-x: auto;
+}
+
+.skills-header {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.skills-op-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
