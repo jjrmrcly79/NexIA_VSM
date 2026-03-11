@@ -8,6 +8,7 @@ import Execution from './pages/Execution';
 import Integrations from './pages/Integrations';
 import Dashboards from './pages/Dashboards';
 import Standards from './pages/Standards';
+import Manual from './pages/Manual';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/dashboards" element={<Dashboards />} />
           <Route path="/standards" element={<Standards />} />
+          <Route path="/manual" element={<Manual />} />
         </Routes>
       </main>
     </div>
