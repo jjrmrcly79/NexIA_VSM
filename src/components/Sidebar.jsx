@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import './Sidebar.css';
 
 const NAV_ITEMS = [
@@ -15,6 +16,11 @@ const NAV_ITEMS = [
 
 export default function Sidebar() {
   const location = useLocation();
+  const { user, signOut } = useAuth();
+
+  function handleSignOut() {
+    signOut().catch(err => console.error('Error signing out:', err));
+  }
 
   return (
     <aside className="sidebar">
@@ -44,6 +50,20 @@ export default function Sidebar() {
       </nav>
 
       <div className="sidebar-footer">
+        {user && (
+          <div className="sidebar-user">
+            <span className="sidebar-user-email" title={user.email}>
+              {user.email}
+            </span>
+            <button
+              className="sidebar-logout-btn"
+              onClick={handleSignOut}
+              title="Cerrar sesión"
+            >
+              ⏻
+            </button>
+          </div>
+        )}
         <div className="sidebar-version">v1.0.0</div>
         <div className="sidebar-tagline">Flujo de Valor</div>
       </div>

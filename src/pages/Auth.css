@@ -1,0 +1,216 @@
+/* ===================================================
+   Auth Page — NexIA VSM
+=================================================== */
+.auth-page {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.auth-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, hsl(245 70% 10%) 0%, hsl(220 30% 6%) 60%, hsl(200 40% 5%) 100%);
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  background: hsla(230 30% 10% / 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid hsla(250 60% 60% / 0.2);
+  border-radius: 20px;
+  padding: 2.5rem 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 24px 64px hsla(245 80% 10% / 0.6), 0 0 0 1px hsla(250 60% 60% / 0.1);
+}
+
+/* Brand */
+.auth-brand {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-logo {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+}
+
+.auth-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.auth-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #a5b4fc 0%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.25rem;
+}
+
+.auth-subtitle {
+  font-size: 0.85rem;
+  color: hsl(220 20% 55%);
+  margin: 0;
+}
+
+/* Tabs */
+.auth-tabs {
+  display: flex;
+  gap: 0;
+  background: hsla(230 30% 8% / 0.8);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 1.75rem;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 0.55rem 1rem;
+  border: none;
+  background: transparent;
+  color: hsl(220 20% 55%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-tab:hover {
+  color: hsl(220 20% 80%);
+}
+
+.auth-tab.active {
+  background: linear-gradient(135deg, hsl(245 70% 45%) 0%, hsl(200 80% 45%) 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px hsla(245 70% 40% / 0.4);
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auth-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: hsl(220 20% 65%);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.auth-field input {
+  background: hsla(230 30% 8% / 0.8);
+  border: 1px solid hsla(250 40% 50% / 0.2);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  color: hsl(220 20% 90%);
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.auth-field input::placeholder {
+  color: hsl(220 20% 40%);
+}
+
+.auth-field input:focus {
+  border-color: hsl(245 70% 60%);
+  box-shadow: 0 0 0 3px hsla(245 70% 60% / 0.15);
+}
+
+/* Messages */
+.auth-error {
+  background: hsla(0 70% 50% / 0.15);
+  border: 1px solid hsla(0 70% 50% / 0.3);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  color: hsl(0 80% 75%);
+  margin: 0;
+}
+
+.auth-info {
+  background: hsla(160 70% 40% / 0.15);
+  border: 1px solid hsla(160 70% 40% / 0.3);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  color: hsl(160 70% 70%);
+  margin: 0;
+}
+
+/* Submit button */
+.auth-submit {
+  margin-top: 0.25rem;
+  padding: 0.85rem 1rem;
+  background: linear-gradient(135deg, hsl(245 70% 55%) 0%, hsl(200 80% 50%) 100%);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px hsla(245 70% 50% / 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+}
+
+.auth-submit:hover:not(:disabled) {
+  opacity: 0.9;
+  box-shadow: 0 6px 28px hsla(245 70% 50% / 0.5);
+  transform: translateY(-1px);
+}
+
+.auth-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.auth-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid hsla(255 100% 100% / 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: auth-spin 0.7s linear infinite;
+}
+
+@keyframes auth-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Footer */
+.auth-footer {
+  text-align: center;
+  margin: 1.5rem 0 0;
+  font-size: 0.75rem;
+  color: hsl(220 20% 40%);
+}
