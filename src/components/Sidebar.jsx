@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { path: '/dashboards', label: 'Dashboards', icon: '📊' },
   { path: '/standards', label: 'Estándares', icon: '📋' },
   { path: '/manual', label: 'Manual', icon: '📘' },
+  { path: '/about', label: 'Acerca de', icon: 'ℹ️' },
 ];
 
 export default function Sidebar() {

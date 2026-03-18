@@ -11,6 +11,7 @@ import Integrations from './pages/Integrations';
 import Dashboards from './pages/Dashboards';
 import Standards from './pages/Standards';
 import Manual from './pages/Manual';
+import About from './pages/About';
 
 function ProtectedRoute({ children }) {
   const { session, loading } = useAuth();
@@ -83,6 +84,7 @@ export default function App() {
           <Route path="/dashboards" element={<Dashboards />} />
           <Route path="/standards" element={<Standards />} />
           <Route path="/manual" element={<Manual />} />
+          <Route path="/about" element={<About />} />
           <Route path="/auth" element={<Navigate to="/" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
